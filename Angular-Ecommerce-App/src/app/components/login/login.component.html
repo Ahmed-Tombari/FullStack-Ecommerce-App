@@ -1,0 +1,19 @@
+<div class="login-status-header">
+
+  <!--<div *ngIf="error" class="error">
+  {{ error }}
+  </div>-->
+  <div *ngIf="isAuthenticated && userName">
+    <div class="Text">Welcome back, {{ userName }}!</div>
+  <button  class="au-btn-submit"  *ngIf="isAuthenticated" (click)="logout()">Logout</button>
+  <button routerLink="/members"  class="au-btn-submit ml-1">Members</button>
+  <button routerLink="/order-history"  class="au-btn-submit ml-1">Orders</button>
+
+  </div>
+
+  <div *ngIf="!isAuthenticated">
+
+  <button  class="au-btn-submit"   (click)="login()">Login</button>
+
+  </div>
+</div>
